@@ -1,0 +1,14 @@
+<div class="d-flex main">
+
+  <div *ngFor="let movie of Movies " class="card movie movie-card">
+
+    <img *ngIf="movie.poster_path" class="card-img-top img" alt="{{movie.title}} " [routerLink]="['details',movie.id]"
+      src="{{ IMG_URL + movie.poster_path }}">
+    <img *ngIf=" !movie.poster_path" class="card-img-top img" alt="{{movie.title}}" [routerLink]="['details',movie.id]"
+      src="../../../assets/not-found-image.jpg">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.title}}</h5>
+      <p class="card-text vote " [ngClass]="getColor(movie.vote_average)"> {{movie.vote_average}}/10 </p>
+    </div>
+  </div>
+</div>

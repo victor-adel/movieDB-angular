@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">{{title}}</span>
+  </div>
+</nav>
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-lg-3">
+      <img *ngIf="poster_path" class="card-img-top img" alt="{{title}} " src="{{ IMG_URL + poster_path }}">
+      <!-- <img *ngIf="!poster_path" class="card-img-top img" alt="{{title}}" src="../../../assets/not-found-image.jpg"> -->
+    </div>
+    <div class="col-lg-9 mt-5">
+      <h5>{{overview}}</h5>
+      <div class="row pt-3">
+        <div class="col-lg-4 d-flex flex-column ">
+          <span> vote count : {{vote_count}} </span>
+          <span> average vote : {{vote_average}} </span>
+        </div>
+        <div class="col-lg-4 ">
+          <span> release date : {{release_date}}</span>
+        </div>
+        <div class="col-lg-4  ">
+          <span> {{adult ? "+18" : "family movie"}}</span>
+        </div>
+      </div>
+
+      <H5 class="pt-2"> genres :
+
+        <span *ngFor="let genre of genres " class='badge bg-secondary m-1 '> {{genre.name}} </span>
+
+      </H5>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid d-flex">
+    <span class="navbar-brand">movieDB</span>
+    <input [(ngModel)]="search" (keyup)="onSubmit()" (blur)="onSubmit()" name="search"
+      class="form-control me-2 rounded-pill" id="search" placeholder="Search">
+
+  </div>
+</nav>
