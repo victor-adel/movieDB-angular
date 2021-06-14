@@ -26,10 +26,8 @@ export class MovieDelailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((prams) => {
       this.id = prams.get('id');
-      console.log(this.id);
 
       this.Service.getMovieDetails(this.id).subscribe((res) => {
-        console.log(res);
         this.title = res.title;
         this.poster_path = res.poster_path;
         this.vote_average = res.vote_average;
@@ -38,7 +36,6 @@ export class MovieDelailsComponent implements OnInit {
         this.release_date = res.release_date;
         this.vote_count = res.vote_count;
         this.adult = res.adult;
-        console.log(this.genres);
       });
     });
   }
