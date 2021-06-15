@@ -9,7 +9,7 @@ import { NavBarComponent } from './popular-movie/nav-bar/nav-bar.component';
 import { MovieCardComponent } from './popular-movie/movie-card/movie-card.component';
 import { GetMoviesService } from './get-movies.service';
 import { PagnationComponent } from './popular-movie/pagnation/pagnation.component';
-import { MovieDelailsComponent } from './movie-delails/movie-delails.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { MovieDelailsComponent } from './movie-delails/movie-delails.component';
     NavBarComponent,
     MovieCardComponent,
     PagnationComponent,
-    MovieDelailsComponent,
+    // MovieDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [GetMoviesService],

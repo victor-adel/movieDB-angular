@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { GetMoviesService } from '../get-movies.service';
 
 @Component({
-  selector: 'movie-delails',
-  templateUrl: './movie-delails.component.html',
-  styleUrls: ['./movie-delails.component.css'],
+  selector: 'movie-details',
+  templateUrl: './movie-details.component.html',
+  styleUrls: ['./movie-details.component.css'],
 })
-export class MovieDelailsComponent implements OnInit {
+export class MovieDetailsComponent implements OnInit {
   id: any;
   title: string = '';
   poster_path: string = '';
